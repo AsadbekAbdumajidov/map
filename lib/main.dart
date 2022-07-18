@@ -1,5 +1,5 @@
-import 'package:c/views/map.dart';
 import 'package:flutter/material.dart';
+import 'package:map/views/map.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,10 +10,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Map',
-      
-      home: MapViews(),
+      theme: ThemeData(
+        primaryColor: Colors.white,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: const MapViews(),
     );
   }
 }
